@@ -8,8 +8,6 @@
 # Setup
 * ソース取得
 ```
-mkdir ~/chika-bot
-cd ~/chika-bot
 git clone https://github.com/mathaaki/chika-bot.git
 ```
 
