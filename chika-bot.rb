@@ -27,6 +27,11 @@ client.on :message do |data|
     client.message channel: data['channel'], text: "<@#{data['user']}> 打刻したか？"
   when /#(\d{5})/ then
     client.message channel: data['channel'], text: ENV['REDMINE_URL'] + "issues/#{$1}"
+  when '<@U3F9CMFHA> for_newcomers' then
+    client.message channel: data['channel'], text: "http://qiita.com/Mic-U/items/f9de1c08c47c50620905"
+    client.message channel: data['channel'], text: "http://qiita.com/STEEL_PLUS/items/c3f8d0d7d9588094686d"
+    client.message channel: data['channel'], text: "http://qiita.com/advent-calendar/2016/freshman_engineer"
+    client.message channel: data['channel'], text: "↑新人諸君読んでおくように！"
   end
 end
 
