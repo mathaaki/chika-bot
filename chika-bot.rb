@@ -25,6 +25,8 @@ client.on :message do |data|
     client.message channel: data['channel'], text: HelpMessage
   when /帰/ then
     client.message channel: data['channel'], text: "<@#{data['user']}> 打刻したか？"
+  when /#(\d{5})/ then
+    client.message channel: data['channel'], text: ENV['REDMINE_URL'] + "issues/#{$1}"
   end
 end
 
